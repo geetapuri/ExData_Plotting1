@@ -14,7 +14,7 @@ electricity_subset$DateTime <- paste(electricity_subset$Date, electricity_subset
 electricity_subset$DateTime <- strptime(electricity_subset$DateTime, format="%d/%m/%Y %H:%M:%S" )
 ##Now create the plots for this subsetted data
 
-plot(electricity_subset$DateTime, electricity_subset$Global_active_power, type="l", ylab="Global Active Power(kilowatts)")
+plot(electricity_subset$DateTime, electricity_subset$Global_active_power, type="l", ylab="Global Active Power(kilowatts)", xlab="")
 dev.copy(png, 'Plot2.png')
 
 ##Must turn the device off!
