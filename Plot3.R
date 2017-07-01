@@ -1,5 +1,5 @@
 ##Plot3.R
-##To create plot for Global Active Power
+##To create plot for Submeters
 
 ##Read the data
 setwd("~/Technology/Coursera/R/4th Module - Exploratory Graphics/Week 1 Project")

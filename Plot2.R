@@ -1,5 +1,5 @@
 ##Plot2.R
-##To create plot for Global Active Power
+##To create plot for Global Active Power Vs DateTime
 
 ##Read the data
 setwd("~/Technology/Coursera/R/4th Module - Exploratory Graphics/Week 1 Project")
