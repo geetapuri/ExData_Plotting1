@@ -1,4 +1,4 @@
-##Plot2.R
+##Plot3.R
 ##To create plot for Global Active Power
 
 ##Read the data
@@ -14,8 +14,16 @@ electricity_subset$DateTime <- paste(electricity_subset$Date, electricity_subset
 electricity_subset$DateTime <- strptime(electricity_subset$DateTime, format="%d/%m/%Y %H:%M:%S" )
 ##Now create the plots for this subsetted data
 
-plot(electricity_subset$DateTime, electricity_subset$Global_active_power, type="l", ylab="Global Active Power(kilowatts)", xlab="")
-dev.copy(png, 'Plot2.png')
+##3 variables added one by one
+plot(electricity_subset$DateTime, electricity_subset$Sub_metering_1, type="l", xlab="", ylab="Energy Sub Metering")
+lines(electricity_subset$DateTime, electricity_subset$Sub_metering_2, type="l", col="red")
+lines(electricity_subset$DateTime, electricity_subset$Sub_metering_3, type="l", col="blue")
+
+## add legend
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=1, col=c("black","red","blue"))
+
+
+dev.copy(png, 'Plot3.png')
 
 ##Must turn the device off!
 dev.off()
